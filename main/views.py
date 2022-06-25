@@ -9,7 +9,7 @@ User = get_user_model()
 
 
 def index(request, *args, **kwargs):
-    return render(request, 'main/index.html')
+    return render(request, 'main/list_work.html')
 
 
 # def about_profile_view(request, username, *args, **kwargs):

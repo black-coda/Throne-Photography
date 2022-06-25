@@ -7,19 +7,19 @@ from django.views.generic import ListView, DeleteView
 
 
 # continue from here dude
-def categoryListView(request, *args, **kwargs):
-    category = PhotoCreationForm()
-    # category_random = Category.objects.filter("?")
-    # print(category_random)
-    # category_
+# def categoryListView(request, *args, **kwargs):
+#     category = PhotoCreationForm()
+#     # category_random = Category.objects.filter("?")
+#     # print(category_random)
+#     # category_
 
-    # for c in category:
-    #     print(c.)
-    # category_image = Category.objects.get('?')
-    context = {
-        'form': category
-    }
-    return render(request, 'main/index.html', context)
+#     # for c in category:
+#     #     print(c.)
+#     # category_image = Category.objects.get('?')
+#     context = {
+#         'form': category
+#     }
+#     return render(request, 'main/index.html', context)
 
 
 class DeletePhotogreaphyView(DeleteView):
@@ -29,7 +29,8 @@ class DeletePhotogreaphyView(DeleteView):
 
 class PhotographyListView(ListView):
     model = PhotoGraphy
-    template_name = 'list_view.html'
+    template_name = 'main/list_work.html'
+    context_object_name = 'photos'
     paginate_by = 40
 
 
